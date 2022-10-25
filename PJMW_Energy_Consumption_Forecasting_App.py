@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import datetime
+import matplotlib
 from matplotlib import pyplot as plt
 
 st.title("PJM Energy Forecasting App")
