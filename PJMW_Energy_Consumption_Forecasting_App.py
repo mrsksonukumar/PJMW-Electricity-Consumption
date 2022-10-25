@@ -19,10 +19,10 @@ st.sidebar.header('User Input Parameters')
 
 no_days = st.sidebar.number_input("Insert Number of days", min_value=7, max_value=4000, step=1)
 
-with open("C:\\Users\\mrsks\\Downloads\\PJMWForecasting.pkl", mode="rb") as f:
+with open("PJMWForecasting.pkl", mode="rb") as f:
     model = pickle.load(f)
 
-data=pd.read_csv("C:\\Users\\mrsks\\OneDrive\\Desktop\Data Science - Somnath Sir\Project 2\PJMW_hourly.csv",index_col='Datetime',parse_dates=True)
+data=pd.read_csv('PJMW_hourly.csv',index_col='Datetime',parse_dates=True)
 data.rename({'PJMW_MW':'MW'},inplace=True,axis=1)
 forecast_check_data = np.array(data['MW'][:'2018-07-04'][-7:])
 z=forecast_check_data
